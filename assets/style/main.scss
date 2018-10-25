@@ -1,0 +1,23 @@
+@import './layout.scss';
+
+body {
+  background-color: #f4f5f5;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 14px 2px #ebebeb;
+  z-index: 2;
+}
+
+.site-center {
+  min-height: calc(100vh - 40px - 141px);
+}
+
+.site-footer {
+  height: 100px;
+  padding: 20px 0;
+}
