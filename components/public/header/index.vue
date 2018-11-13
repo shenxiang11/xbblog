@@ -12,11 +12,11 @@
           <nuxt-link to="/">首页</nuxt-link>
         </li>
         <li class="nav-item list">
-          <nuxt-link to="/articles/all">博客</nuxt-link>
+          <nuxt-link to="/">博客</nuxt-link>
           <dl>
-            <dd><nuxt-link to="/articles/code">代码</nuxt-link></dd>
-            <dd><nuxt-link to="/articles/think">思考</nuxt-link></dd>
-            <dd><nuxt-link to="/articles/fitness">健身</nuxt-link></dd>
+            <dd><nuxt-link to="/article/code">代码</nuxt-link></dd>
+            <dd><nuxt-link to="/article/think">思考</nuxt-link></dd>
+            <dd><nuxt-link to="/article/fitness">健身</nuxt-link></dd>
           </dl>
         </li>
         <li class="nav-item">

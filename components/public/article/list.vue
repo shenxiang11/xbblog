@@ -1,15 +1,11 @@
 <template>
-  <div class="article-list">
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
-    <list-item />
+  <div>
+    <div class="article-list">
+      <list-item
+        v-for="item in list"
+        :key="item._id"
+        :content="item" />
+    </div>
   </div>
 </template>
 
@@ -19,6 +15,14 @@ import ListItem from './item'
 export default {
   components: {
     ListItem
+  },
+  props: {
+    list: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
   }
 }
 </script>

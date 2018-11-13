@@ -1,25 +1,27 @@
 <template>
   <article class="article">
     <nuxt-link
-      to="/"
+      :to="`/article/${content._id}`"
       class="article-link">
-      <h3 class="article-title">我所向往的技术团队</h3>
+      <h3 class="article-title">{{ content.title }}</h3>
       <div class="summary">
-        <div class="thumb">
+        <div
+          v-if="content.thumb"
+          class="thumb">
           <img
-            src="https://static.jooger.me/img/source/20181020/team_1540034403048.webp?x-oss-process=style/watermark">
+            :src="content.thumb">
         </div>
-        <p class="description">本篇文章所讲的都只是我所向往的好的技术团队的一些我自己的看法，可能会有些片面，但是这就是我想说和想要的，也希望未来能和这样一个团队，和这个团队里的小伙伴们一起玩耍和工作</p>
+        <p class="description">{{ content.description }}</p>
       </div>
     </nuxt-link>
     <div class="status">
       <div class="meta">
         <div class="meta-item">
-          <i class="iconfont icon-mulu"/>代码
+          <i class="iconfont icon-mulu"/>{{ content.category | category }}
         </div>
       </div>
       <time class="time">
-        <i class="iconfont icon-shijian"/>2018-08-30
+        <i class="iconfont icon-shijian"/>{{ content.create_at | time }}
       </time>
     </div>
   </article>
@@ -27,6 +29,14 @@
 
 <script>
 export default {
+  props: {
+    content: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  }
 }
 </script>
 

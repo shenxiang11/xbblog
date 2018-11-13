@@ -13,19 +13,21 @@
         <h3 class="my-name">香饽饽zizizi</h3>
       </div>
     </div>
-    <div class="row about-me">
-      <div class="col-6 offset-3">
-        <blockquote><p>个人简介</p></blockquote>
-        <p>名字：香饽饽zizizi</p>
-        <p>籍贯：上海市 - 闵行区</p>
-        <p>生日：1993-12-10</p>
-        <p>喜好：Code.徐慧.Fitness</p>
-        <p>学历：本科</p>
-        <p>专业：软件工程</p>
-        <blockquote><p>联系方式</p></blockquote>
-        <p>邮箱：lrevan@qq.com</p>
-        <p>QQ：1244464309</p>
-        <p>微信：WenJ951017</p>
+    <div class="container">
+      <div class="row about-me">
+        <div class="col-6 offset-3">
+          <blockquote><p>个人简介</p></blockquote>
+          <p>名字：香饽饽zizizi</p>
+          <p>籍贯：上海市 - 闵行区</p>
+          <p>生日：1993-12-10</p>
+          <p>喜好：Code.徐慧.Fitness</p>
+          <p>学历：本科</p>
+          <p>专业：软件工程</p>
+          <blockquote><p>联系方式</p></blockquote>
+          <p>邮箱：863461783@qq.com</p>
+          <p>QQ：863461783</p>
+          <p>微信：xiangge54288</p>
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +40,7 @@ export default {
 
 <style lang="scss">
 .page-about {
+  background-color: #fff;
   .portraiture {
     position: relative;
     z-index: 1;
