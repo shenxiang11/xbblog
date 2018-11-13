@@ -1,7 +1,7 @@
 <template>
   <article class="article">
     <nuxt-link
-      :to="`/article/${content._id}`"
+      :to="`/article/detail/${content._id}`"
       class="article-link">
       <h3 class="article-title">{{ content.title }}</h3>
       <div class="summary">
