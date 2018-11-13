@@ -16,5 +16,5 @@ Vue.filter('time', value => {
 })
 
 Vue.filter('datetime', value => {
-  return dayjs(value).format('YYYY-MM-DD hh:mm')
+  return dayjs(value).format('YYYY-MM-DD HH:mm')
 })
