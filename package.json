@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "prod": "pm2 start npm -- start --name='blog'",
+    "prod": "pm2 start --name='blog' npm -- start",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
