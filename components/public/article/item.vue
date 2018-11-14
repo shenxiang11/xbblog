@@ -72,6 +72,7 @@ export default {
         width: 150px;
         max-height: 90px;
         margin-right: 16px;
+        font-size: 0;
         overflow: hidden;
         border: 4px solid #e6e6e6;
         img {
