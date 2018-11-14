@@ -67,6 +67,30 @@ export default {
     return {
       article: {}
     }
+  },
+  mounted () {
+    this.article.style && this.runStyle()
+    this.article.script && this.runScript()
+  },
+  beforeDestory () {
+    document.getElementById('DynamicStyle').remove()
+    document.getElementById('DynamicScript').remove()
+    __dynamicScriptClear__ && __dynamicScriptClear__()
+  },
+  methods: {
+    runStyle () {
+      const style = document.createElement('style')
+      style.innerHTML = this.article.style
+      style.id = 'DynamicStyle'
+      document.getElementsByTagName('head')[0].appendChild(style)
+    },
+    runScript () {
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.text = this.article.script
+      script.id = 'DynamicScript'
+      document.getElementsByTagName('body')[0].appendChild(script)
+    }
   }
 }
 </script>
