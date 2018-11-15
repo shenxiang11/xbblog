@@ -68,6 +68,15 @@ export default {
       article: {}
     }
   },
+  head () {
+    return {
+      title: this.article.title,
+      meta: [
+        { hid: 'keywords', name: 'keywords', content: this.article.tag.map(tag => tag.name).join(',') },
+        { hid: 'description', name: 'description', content: this.article.description }
+      ]
+    }
+  },
   mounted () {
     this.article.style && this.runStyle()
     this.article.script && this.runScript()
