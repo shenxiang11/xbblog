@@ -81,10 +81,10 @@ export default {
     this.article.style && this.runStyle()
     this.article.script && this.runScript()
   },
-  beforeDestory () {
+  destroyed () {
+    __dynamicScriptClear__ && __dynamicScriptClear__()
     document.getElementById('DynamicStyle').remove()
     document.getElementById('DynamicScript').remove()
-    __dynamicScriptClear__ && __dynamicScriptClear__()
   },
   methods: {
     runStyle () {
