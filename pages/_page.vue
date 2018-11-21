@@ -1,7 +1,11 @@
 <template>
   <div class="container page-home">
-    <div class="row article-wrapper">
-      <div class="col-6 offset-3">
+    <el-row
+      :gutter="20"
+      class="article-wrapper">
+      <el-col
+        :span="12"
+        :offset="6">
         <article-list
           :list="list"
           :pagination="pagination" />
@@ -14,8 +18,8 @@
             @current-change="handlePageChange"
           />
         </div>
-      </div>
-    </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 

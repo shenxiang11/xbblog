@@ -14,8 +14,12 @@
       </div>
     </div>
     <div class="container">
-      <div class="row about-me">
-        <div class="col-6 offset-3">
+      <el-row
+        :gutter="20"
+        class="about-me">
+        <el-col
+          :span="12"
+          :offset="6">
           <blockquote><p>个人简介</p></blockquote>
           <p>名字：香饽饽zizizi</p>
           <p>籍贯：上海市 - 闵行区</p>
@@ -27,8 +31,8 @@
           <p>邮箱：863461783@qq.com</p>
           <p>QQ：863461783</p>
           <p>微信：xiangge54288</p>
-        </div>
-      </div>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -41,6 +45,7 @@ export default {
 <style lang="scss">
 .page-about {
   background-color: #fff;
+  padding-bottom: 32px;
   .portraiture {
     position: relative;
     z-index: 1;

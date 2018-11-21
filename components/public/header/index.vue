@@ -8,9 +8,9 @@
           alt="">
       </nuxt-link>
       <ul class="nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <nuxt-link to="/">首页</nuxt-link>
-        </li>
+        </li> -->
         <li class="nav-item list">
           <nuxt-link to="/">博客</nuxt-link>
           <dl>
@@ -21,6 +21,9 @@
         </li>
         <li class="nav-item">
           <nuxt-link to="/about">关于我</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <nuxt-link to="/guestbook">留言板</nuxt-link>
         </li>
       </ul>
     </div>

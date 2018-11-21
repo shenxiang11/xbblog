@@ -1,7 +1,10 @@
 <template>
   <div class="container page-articleDetail">
-    <div class="row">
-      <div class="col-6 offset-3">
+    <el-row
+      :gutter="20">
+      <el-col
+        :span="12"
+        :offset="6">
         <div class="article-detail">
           <div class="article">
             <h2 class="title">{{ article.title }}</h2>
@@ -45,8 +48,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -82,9 +85,9 @@ export default {
     this.article.script && this.runScript()
   },
   destroyed () {
-    __dynamicScriptClear__ && __dynamicScriptClear__()
-    document.getElementById('DynamicStyle').remove()
-    document.getElementById('DynamicScript').remove()
+    window.__dynamicScriptClear__ && window.__dynamicScriptClear__()
+    document.getElementById('DynamicStyle') && document.getElementById('DynamicStyle').remove()
+    document.getElementById('DynamicScript') && document.getElementById('DynamicScript').remove()
   },
   methods: {
     runStyle () {
