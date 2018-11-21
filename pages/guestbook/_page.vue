@@ -6,7 +6,7 @@
         :span="18"
         :offset="3">
         <div class="main">
-          <div class="welcome">Stay Hungery, Stay Foolish</div>
+          <div class="welcome">Stay Hungry, Stay Foolish</div>
           <button
             class="button"
             @click="showDialog">我要留言</button>
