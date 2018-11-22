@@ -13,7 +13,7 @@
               :show-file-list="false"
               :before-upload="beforeAvatarUpload"
               class="avatar-uploader"
-              action="https://jsonplaceholder.typicode.com/posts/">
+              action="">
               <img
                 v-if="imageUrl"
                 :src="imageUrl"
