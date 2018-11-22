@@ -51,14 +51,13 @@ module.exports = {
     '@nuxtjs/proxy'
   ],
   /*
-  ** Axios module configuration
+  ** Axios module configuration 开发时工具转发、线上nginx转发
   */
   axios: {
-    proxy: true
+    proxy: process.env.NODE_ENV === 'development'
   },
   proxy: {
     '/api': {
-      // target: 'https://che.che0001.com',
       target: 'http://127.0.0.1:4000',
       pathRewrite: {'^/api': '/api'}
     }
