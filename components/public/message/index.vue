@@ -30,8 +30,11 @@ export default {
   },
   data () {
     return {
-      IMG_PREFIX: process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : location.origin
+      IMG_PREFIX: ''
     }
+  },
+  mounted () {
+    this.IMG_PREFIX = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : location.origin
   }
 }
 </script>
