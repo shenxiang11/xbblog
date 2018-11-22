@@ -51,10 +51,10 @@ module.exports = {
     '@nuxtjs/proxy'
   ],
   /*
-  ** Axios module configuration 开发时工具转发、线上nginx转发
+  ** Axios module configuration
   */
   axios: {
-    proxy: process.env.NODE_ENV === 'development'
+    proxy: true
   },
   proxy: {
     '/api': {
