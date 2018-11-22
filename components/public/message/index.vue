@@ -5,9 +5,9 @@
       arget="_blank"
       class="user">
       <img
-        src="@/assets/img/logo_s.png"
+        :src="(message.user && message.user.portrait) ? `${IMG_PREFIX}${message.user.portrait}`: require('@/assets/img/defaultAvatar.jpg')"
         class="avatar">
-      <span class="name">{{ message.user && message.user.mail }}</span>
+      <span class="name">{{ message.user && (message.user.nickname || message.user.mail) }}</span>
     </a>
     <div
       class="content"
@@ -26,6 +26,11 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  data () {
+    return {
+      IMG_PREFIX: process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : location.origin
     }
   }
 }
@@ -54,6 +59,7 @@ export default {
       height: 18px;
       border-radius: 50%;
       margin-right: 12px;
+      object-fit: cover;
     }
     .name {
       color: #222;

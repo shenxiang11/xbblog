@@ -45,6 +45,19 @@ export function getUserinfo({ commit }) {
     })
 }
 
+export function updateUserinfo({ commit }, { _id, website, nickname, portrait}) {
+  const formData = new FormData()
+
+  portrait && formData.append('portrait', portrait)
+  formData.append('website', website)
+  formData.append('nickname', nickname)
+
+  return this.$axios.$patch(`/api/auth/update-info/${_id}`, formData)
+    .then(res => {
+      commit(types.SET_USER, res.result)
+    })
+}
+
 export function logout({ commit }) {
   commit(types.SET_TOKEN, null)
   commit(types.SET_USER, null)

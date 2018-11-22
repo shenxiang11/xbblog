@@ -11,7 +11,9 @@
           @click="$store.dispatch('showLogin')">登录</a>
       </p>
       <p v-if="$store.state.user">
-        用户名 {{ $store.state.user.mail }},
+        用户名
+        <nuxt-link :to="`/user/${$store.state.user._id}`">{{ $store.state.user.mail }}</nuxt-link>
+        ,
         <a
           href="javascript:void(0)"
           @click="$store.dispatch('logout')">[退出]</a>

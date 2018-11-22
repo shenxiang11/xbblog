@@ -71,8 +71,6 @@ export default {
       }
     })
 
-    console.log(res)
-
     return {
       list: res.result.list,
       pagination: res.result.pagination
