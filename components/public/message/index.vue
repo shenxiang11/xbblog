@@ -5,7 +5,7 @@
       arget="_blank"
       class="user">
       <img
-        :src="(message.user && message.user.portrait) ? `${IMG_PREFIX}${message.user.portrait}`: require('@/assets/img/defaultAvatar.jpg')"
+        :src="(message.user && message.user.portrait) ? `${PORTRAIT_PREFIX}${message.user.portrait}`: require('@/assets/img/defaultAvatar.jpg')"
         class="avatar">
       <span class="name">{{ message.user && (message.user.nickname || message.user.mail) }}</span>
     </a>
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import { PORTRAIT_PREFIX } from '@/utils/constant'
+
 export default {
   props: {
     message: {
@@ -30,11 +32,8 @@ export default {
   },
   data () {
     return {
-      IMG_PREFIX: ''
+      PORTRAIT_PREFIX
     }
-  },
-  mounted () {
-    this.IMG_PREFIX = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : location.origin
   }
 }
 </script>

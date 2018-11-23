@@ -52,8 +52,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
-const IMG_PREFIX = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : location.origin
+import { PORTRAIT_PREFIX } from '@/utils/constant'
 
 export default {
   data () {
@@ -82,7 +81,7 @@ export default {
         this.form.mail = this.user.mail
         this.form.nickname = this.user.nickname
         this.form.website = this.user.website
-        this.imageUrl = IMG_PREFIX + this.user.portrait
+        this.imageUrl = PORTRAIT_PREFIX + this.user.portrait
         this.loading = false
       }, 1000)
     },
