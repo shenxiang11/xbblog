@@ -11,7 +11,7 @@
     </a>
     <div
       class="content"
-      v-html="message.message" />
+      v-html="htmify(message.message)" />
     <div class="meta">
       <time class="time">{{ message.create_at | datetime }}</time>
     </div>
@@ -33,6 +33,11 @@ export default {
   data () {
     return {
       PORTRAIT_PREFIX
+    }
+  },
+  methods: {
+    htmify (content) {
+      return content.replace(/\n/g, '<br>')
     }
   }
 }
