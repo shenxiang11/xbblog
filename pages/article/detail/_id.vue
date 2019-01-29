@@ -62,8 +62,7 @@ export default {
 
     res && (res.result.content = marked(res.result.content))
 
-    console.log(app, params)
-    const { result } = await app.$axios.$get(`/api/wechat/params?url=${encodeURIComponent(location.href)}`)
+    const { result } = await app.$axios.$get(`/api/wechat/params?url=${encodeURIComponent('https://www.sweetsmartstrongshen.cc' + app.context.route.fullPath)}`)
 
     return {
       article: res.result,
