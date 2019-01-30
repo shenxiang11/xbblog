@@ -108,7 +108,7 @@ export default {
         wx.updateAppMessageShareData({
           title: '自定义分享标题', // 分享标题
           desc: '自定义分享成功',
-          link: 'https://www.baidu.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+          link: location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
           imgUrl: 'https://raw.githubusercontent.com/shenxiang11/staticStore/master/Carter.jpeg', // 分享图标
           success: function () {
             // 设置成功
